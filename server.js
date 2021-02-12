@@ -14,7 +14,7 @@ const MessagesModel = require("./src/models/messaging.model");
 const postsModel = require("./src/models/posts.model");
 const { count } = require("./src/models/users.model");
 const messagingModel = require("./src/models/messaging.model");
-const PORT = 4000;
+const PORT = 8080;
 // app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
