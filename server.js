@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require('path');
+const port = process.env.PORT || 8080;
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -16,7 +18,7 @@ const PORT = 4000;
 // app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-
+app.use(express.static(__dirname));
 app.use(express.static("./images"));
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
